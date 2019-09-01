@@ -1,0 +1,64 @@
+<html>
+
+<head>
+  <!-- Load the latest version of TensorFlow.js -->
+  <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+  <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+  <link rel='stylesheet' href='styles.css' />
+</head>
+
+<body>
+
+
+  <script src="index_imageClassify.js"></script>
+  
+  
+  <div class="footer"></div>
+  <div id="console" class="header">
+  </div>
+
+    <table  border="1" style="width:85%" align="centre">
+        <caption><h2>Image Anlayzer</h2></caption>
+    
+      <tr>
+        <td class="column">
+           
+                <h3>Enter and image URL Below</h3>
+                <h5>Use Sample Images below or add your own image URL: </h5>
+                <ul>
+                  <li>https://i.imgur.com/lYc3ZJz.jpg</li>
+                  <li>https://i.imgur.com/krMI2Lq.jpg</li>
+                  </ul>
+                <p>
+                  <input type="text" id="imageurl" />
+                  <input type="button" class="button" id="btn" value="GO" onclick="load_image()" />
+                </p>
+          
+        </td>
+        <td class="column"> <div id="democontainer">
+            <br />
+            <input type="submit" class="button" onclick="show_result(); return false;" name="demo" id="demo"
+              value="Analyse Image">
+            <h3>
+              
+              <div id="output"> Prediction: </div>
+            </h3>
+          </div>
+        </td>
+        <td class="column">
+            <div id="imagePlaceHolder" >
+                <!-- Add an image that we will use to test -->
+                <!---img id="img" crossOrigin src="https://i.imgur.com/JlUvsxa.jpg" width=227 height=227/ -->
+                <!--<img id="img" crossorigin="anonymous" src="https://i.imgur.com/JT7SP0M.jpg" width="327" height="327"/> -->
+                <!-- Load index.js after the content of the page -->
+              </div>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+  
+  <div class="footer" >Machine Learning technologies Inc 2019. Powered by Siraj Raval.</div>
+ 
+</body>
+</html>
